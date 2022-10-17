@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io (1)/apple-touch-icon.png (1)">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io (1)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io (1)/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io (1)/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>ZEST-Gallery</title>
+    <link rel="stylesheet" href="check.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Libre+Baskerville&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="jquery.flipster.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./jquery.flipster.min.js"></script>
+    <link rel="stylesheet" href="./jquery.flipster.min.css" type="text/css">
+
+</head>
+
+<body>
+
+    <header>
+        <h2>NAVBAR</h2>
+    </header>
+    <div class="back">
+
+        <div class="content">
+            <ul>
+                <li><a href="#M">marathon</a></li>
+                <li><a href="#C">IMAGES</a></li>
+                <li><a href="#E">events</a></li>
+                <li><a href="#E">events</a></li>
+            </ul>
+        </div>
+        <div id="M">
+
+
+            <div class="name">
+                <h1>MARATHON</h1>
+            </div>
+            <div id="marathon">
+                <div class="swiper">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide"><img src="./Images/mara1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/mara4.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/mara5.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="./Images/mara7.jpg" alt=""></div>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div id="C">
+            <div class="name2">
+                <h1>IMAGES</h1>
+            </div>
+
+            <div class="full-img" id="fullImgBox">
+                <img src="./Images/z2.jpeg" alt="" id="fullImg">
+                <span onclick="closeFullImg()">
+                    <h2>X</h2>
+                </span>
+            </div>
+            <div class="gallery">
+                <img src="./Images/z2.jpeg" alt="" onclick="openFullImg(this.src)">
+                <img src="./Images/z3.jpeg" alt="" onclick="openFullImg(this.src)">
+                <img src="./Images/z4.jpeg" alt="" onclick="openFullImg(this.src)">
+                <img src="./Images/z5.jpeg" alt="" onclick="openFullImg(this.src)">
+                <img src="./Images/z6.jpeg" alt="" onclick="openFullImg(this.src)">
+                <img src="./Images/z7.jpeg" alt="" onclick="openFullImg(this.src)">
+            </div>
+
+            <script>
+                var fullImgBox = document.getElementById("fullImgBox");
+                var fullImg = document.getElementById("fullImg");
+
+                function openFullImg(pic) {
+                    fullImgBox.style.display = "flex";
+                    fullImg.src = pic;
+                }
+
+                function closeFullImg() {
+                    fullImgBox.style.display = "none";
+                    fullImg.src = pic;
+                }
+
+            </script>
+        </div>
+
+
+
+
+
+
+
+
+        <div id="E">
+
+            <div class="name2">
+                <h1>EVENTS</h1>
+            </div>
+            <!-- <br> -->
+            <div id="events">
+                <div class="full-img" id="fullImgBo">
+                    <img src="./Images/m7.jpg" alt="" id="fullIm">
+                    <span onclick="closeFullImg()">
+                        <h2>X</h2>
+                    </span>
+                </div>
+                <div id="myslider">
+                    <ul>
+                        <li><img src="./Images/m7.jpg" class="img" alt="" onclick="openFullImg"></li>
+                        <li><img src="./Images/m8.jpg" class="img" alt="" onclick="openFullImg"></li>
+                        <li><img src="./Images/m9.jpg" class="img" alt="" onclick="openFullImg"></li>
+                        <li><img src="./Images/m11.jpg" class="img" alt="" onclick="openFullImg"></li>
+                        <li><img src="./Images/m15.jpeg" class="img" alt="" onclick="openFullImg"></li>
+                        <!-- <li><img src="./Images/z7.jpeg" class="img" alt=""></li>
+                        <li><img src="./Images/z8.jpeg" class="img" alt=""></li> -->
+                        <li><img src="./Images/m14.jpeg" class="img" alt="" onclick="openFullImg"></li>
+                        <li><img src="./Images/m17.jpeg" class="img" alt="" onclick="openFullImg"></li>
+
+                    </ul>
+                </div>
+
+
+
+
+                <script>
+                    var fullImgBo = document.getElementById("fullImgBo");
+                    var fullImg = document.getElementById("fullIm");
+
+                    function openFullImg(pic) {
+                        fullImgBo.style.display = "flex";
+                        fullIm.src = pic;
+                    }
+
+                    function closeFullImg() {
+                        fullImgBo.style.display = "none";
+                        fullIm.src = pic;
+                    }
+
+                </script>
+
+
+
+                <script>
+                    $("#myslider").flipster();
+                </script>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                // Optional parameters
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+            });
+
+        </script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.1.slim.js"></script> -->
+        <!-- <script src="jquery.flipster.min.js"></script> -->
+        <script>$('.carousel').flipster();</script>
+
+        <!-- <pre class="code">$(".carousel").flipster();</pre> -->
+
+    </div>
+    <footer>
+        <p>
+            Copyright &copy;
+            COEP Tech Zest 23'
+        </p>
+    </footer>
+
+</body>
+
+</html>
