@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* margin: 0;
+    padding: 0;
+    height: 1000px; */
+    background-image: url(./Images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+header {
+    margin: 0;
+    height: 3vw;
+    padding: 0;
+    color: #f1f1f1;
+    text-align: center;
+    background-color: black;
+    font-family: 'Bree Serif', serif;
+    z-index: 2;
+
+}
+
+.container {
+
+    transform: translateY(20vh);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: rgb(198, 130, 130); */
+    gap: 20px;
+}
+
+.filterDiv {
+    float: left;
+
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+
+    display: none;
+
+    box-shadow: 1.5px 1.5px 40px black;
+    border-radius: 25px;
+    animation: animate 1s ease, movement 3s infinite ease alternate;
+
+    /* Hidden by default */
+}
+
+@keyframes movement {
+    from {
+        transform: translateX(-30px);
+    }
+
+    to {
+        transform: translateX(30px);
+    }
+}
+
+@keyframes animate {
+    from {
+        scale: 0.5;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+.filterDiv img {
+    height: 30vh;
+    width: 40vh;
+    border-radius: 25px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: flex;
+    /* display:; */
+}
+
+/*  */
+
+#myBtnContainer {
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(5vh);
+
+}
+
+#myBtnContainer .btn {
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+/* Add a light grey background on mouse-over */
+
+
+/* Add a dark background to the active button */
+#myBtnContainer button.active {
+    background-color: #2856ec;
+    color: white;
+    transition: background-color 2s ease;
+}
+
+#myBtnContainer .btn {
+    background-color: #ffffff;
+
+}
+
+#myBtnContainer button.active :hover {
+    background-color: #2856ec;
+
+
+}
+
+
+#myBtnContainer button .btn :hover {
+    background-color: #2856ec;
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    width: 100px;
+    border-radius: 25px;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border: 2px solid #2856ec;
+    box-shadow: inset 0 0 0 0 #2856ec;
+    -webkit-transition: ease-out 0.1s;
+    -moz-transition: ease-out 0.1s;
+    transition: ease-out 1.6s;
+
+}
+
+.btn:hover {
+    box-shadow: inset 0 0 200px 100px #2856ec;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+footer {
+    /* position: sticky; */
+    /* top: 100vh; */
+    /* bottom: 0; */
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    /* display: flex; */
+    text-align: center;
+    height: 3vw;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* .myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.myImg:hover {opacity: 0.7;} */
+
+
+
+
+
+
+.container .filterDiv img {
+    width: 100%;
+    vertical-align: middle;
+    cursor: zoom-in;
+    transition: all 0.3s ease;
+}
+
+.container .filterDiv:hover img {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 75px rgb(77, 69, 69);
+    /* animation: ved 1s infinite ease-in-out linear; */
+}
+
+
+
+
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+}
+
+
+
+.full-img img {
+    /* transform: rotate(-20deg); */
+    width: 95%;
+    max-width: 550px;
+
+}
+
+.full-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-style: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media (max-width: 1000px) {
+
+    .full-img img {
+        /* transform: rotate(-20deg); */
+        width: 95%;
+        max-width: 450px;
+
+    }
+
+
+    @keyframes movement {
+        from {
+            transform: translateX(-20px);
+        }
+
+        to {
+            transform: translateX(20px);
+        }
+    }
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+@media (max-width: 800px) {
+    .gallery .image {
+        width: calc(100% / 2);
+    }
+
+    .filterDiv img {
+        height: 20vh;
+        width: 30vh;
+        border-radius: 15px;
+    }
+
+    .container {
+
+        transform: translateY(10vh);
+    }
+
+    header {
+        height: 30px;
+    }
+
+    footer {
+        height: 30px;
+    }
+
+    .btn {
+        border: none;
+        width: 55px;
+        border-radius: 15px;
+    }
+
+    body {
+        /* margin: 0;
+    padding: 0;*/
+        height: 900px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    @keyframes movement {
+        from {
+            transform: translateX(-10px);
+        }
+
+        to {
+            transform: translateX(10px);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+
+    body {
+        /* margin: 0;
+        padding: 0;*/
+        height: 850px;
+    }
+}
+
+@media (max-width:450px) {
+    body {
+        /* margin: 0;
+        padding: 0;*/
+        height: 910px;
+    }
+
+    .filterDiv img {
+        height: 17vh;
+        width: 25vh;
+        margin: 2px;
+        border-radius: 10px;
+    }
+
+    .full-img img {
+        /* transform: rotate(-20deg); */
+        /* width: 95%; */
+        max-width: 270px;
+
+    }
+}
