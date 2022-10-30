@@ -1,0 +1,18 @@
+footer {
+    /* position: sticky; */
+    /* top: 100vh; */
+    /* bottom: 0; */
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    /* display: flex; */
+    text-align: center;
+    height: 3vw;
+    font-family: 'Poppins', sans-serif;
+
+}

@@ -1,0 +1,71 @@
+.container {
+
+    transform: translateY(20vh);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: rgb(198, 130, 130); */
+    gap: 20px;
+}
+
+.filterDiv {
+    float: left;
+
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+
+    display: none;
+
+    box-shadow: 1.5px 1.5px 40px black;
+    border-radius: 25px;
+    animation: animate 1s ease, movement 3s infinite ease alternate;
+
+    /* Hidden by default */
+}
+
+@keyframes movement {
+    from {
+        transform: translateX(-30px);
+    }
+
+    to {
+        transform: translateX(30px);
+    }
+}
+
+@keyframes animate {
+    from {
+        scale: 0.5;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+.filterDiv img {
+    height: 30vh;
+    width: 40vh;
+    border-radius: 25px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: flex;
+    /* display:; */
+}
+
+.container .filterDiv img {
+    width: 100%;
+    vertical-align: middle;
+    cursor: zoom-in;
+    transition: all 0.3s ease;
+}
+
+.container .filterDiv:hover img {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 75px rgb(77, 69, 69);
+    /* animation: ved 1s infinite ease-in-out linear; */
+}

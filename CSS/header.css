@@ -1,0 +1,11 @@
+header {
+    margin: 0;
+    height: 3vw;
+    padding: 0;
+    color: #f1f1f1;
+    text-align: center;
+    background-color: black;
+    font-family: 'Bree Serif', serif;
+    z-index: 2;
+
+}
